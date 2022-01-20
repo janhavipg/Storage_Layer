@@ -1,0 +1,68 @@
+                                                      Storage Layer Day-3 Assessment
+                                                      
+
+Que-1: Select the American directors ordered from oldest to youngest.
+Ans: 
+moviedb=# select first_name, last_name, date_of_birth from directors
+moviedb-# ORDER BY date_of_birth ASC;
+ first_name |        last_name         | date_of_birth
+------------+--------------------------+---------------
+ Victor     | Fleming                  | 1889-02-23
+ Robert     | Stevenson                | 1905-03-31
+ Robert     | Wise                     | 1914-09-10
+ Stanley    | Kubrick                  | 1928-07-26
+ Kinji      | Fukasaku                 | 1930-07-03
+ Ridley     | Scott                    | 1937-11-30
+ Francis    | Ford Coppola             | 1939-04-07
+ Bruce      | Lee                      | 1940-11-27
+ Hayao      | Miyazaki                 | 1941-01-05
+ Terry      | Jones                    | 1942-02-01
+ Martin     | Scorsese                 | 1942-11-17
+ George     | Lucas                    | 1944-05-14
+ Tony       | Scott                    | 1944-06-21
+ Steven     | Spielberg                | 1946-12-18
+ Yimou      | Zhang                    | 1950-04-02
+ Robert     | Zemeckis                 | 1952-05-14
+ James      | Cameron                  | 1954-08-16
+ Ang        | Lee                      | 1954-10-23
+ Fernando   | Meirelles                | 1955-11-09
+ John       | Lasseter                 | 1957-01-12
+ Kar Wai    | Wong                     | 1958-07-17
+ Luc        | Besson                   | 1959-03-18
+ Mark       | Romanek                  | 1959-09-18
+ Sam        | Raimi                    | 1959-10-23
+ Sion       | Sono                     | 1961-12-18
+ Quentin    | Tarantino                | 1963-03-27
+ Chan-wook  | Park                     | 1963-08-23
+ Guillermo  | del Toro                 | 1964-10-09
+ Tomas      | Alfredson                | 1965-04-01
+ Zack       | Snyder                   | 1966-03-01
+ Paulo      | Morelli                  | 1966-03-10
+ James      | McTeigue                 | 1967-12-29
+ Wes        | Anderson                 | 1969-05-01
+ Martin     | McDonagh                 | 1970-03-26
+ Paul       | Anderson                 | 1970-06-26
+ Florian    | Henckel von Donnersmarck | 1973-05-02
+ Richard    | Ayoade                   | 1977-06-12
+(37 rows)
+
+
+Que-2: Return the distinct nationalities from the directors table.
+
+Ans:
+moviedb=# select DISTINCT nationality FROM directors;
+ nationality
+--------------
+ Chinese
+ American
+ Japanese
+ Australian
+ German
+ Mexican
+ Brazilian
+ French
+ British
+ Swedish
+ South Korean
+(11 rows)
+
