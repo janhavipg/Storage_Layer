@@ -399,10 +399,192 @@ moviedb=# select directors.first_name, directors.last_name, count(movies.movie_n
 
 Que-20: Select the first names, last names and dates of birth from directors & actors table. Order the result by the date of birth.
 Ans:
-moviedb=# select directors.first_name, directors.last_name, directors.date_of_birth, actors.first_name, actors.last_name, actors.date_of_birth
-from directors INNER JOIN actors ON directors.direcor_id = actors.actor_id
-where directors.date_of_birth, actors.date_of_birth;
-
+moviedb=# SELECT first_name, last_name, date_of_birth from directors UNION select first_name, last_name, date_of_birth from actors ORDER BY date_of_birth;
+ first_name |        last_name         | date_of_birth
+------------+--------------------------+---------------
+ Victor     | Fleming                  | 1889-02-23
+ Clark      | Gable                    | 1901-02-01
+ Robert     | Stevenson                | 1905-03-31
+ Scatman    | Crothers                 | 1910-05-23
+ Vivien     | Leigh                    | 1913-11-05
+ Alec       | Guiness                  | 1914-04-02
+ Robert     | Wise                     | 1914-09-10
+ Judy       | Garland                  | 1922-06-10
+ Marlon     | Brando                   | 1924-04-03
+ Dick       | Van Dyke                 | 1925-12-13
+ Stanley    | Kubrick                  | 1928-07-26
+ Sihung     | Lung                     | 1930-01-01
+ Kinji      | Fukasaku                 | 1930-07-03
+ Ian        | Holm                     | 1931-09-12
+ Rebecca    | Pan                      | 1931-12-29
+ Roy        | Scheider                 | 1932-11-10
+ Julie      | Andrews                  | 1935-10-01
+ Dennis     | Hopper                   | 1936-05-17
+ Jack       | Nicholson                | 1937-04-22
+ Ridley     | Scott                    | 1937-11-30
+ Oliver     | Reed                     | 1938-02-13
+ Francis    | Ford Coppola             | 1939-04-07
+ John       | Cleese                   | 1939-10-27
+ Chuck      | Norris                   | 1940-03-10
+ Martin     | Sheen                    | 1940-08-03
+ Bruce      | Lee                      | 1940-11-27
+ Hayao      | Miyazaki                 | 1941-01-05
+ Graham     | Chapman                  | 1941-01-08
+ Per        | Ragnar                   | 1941-05-29
+ Terry      | Jones                    | 1942-02-01
+ Harrison   | Ford                     | 1942-07-13
+ Martin     | Scorsese                 | 1942-11-17
+ Joe        | Pesci                    | 1943-02-09
+ Eric       | Idle                     | 1943-03-29
+ Michael    | Palin                    | 1943-05-05
+ Malcolm    | McDowell                 | 1943-06-13
+ Robert     | De Niro                  | 1943-08-17
+ Rutger     | Hauer                    | 1944-01-23
+ George     | Lucas                    | 1944-05-14
+ Tony       | Scott                    | 1944-06-21
+ Brian      | Cox                      | 1946-06-01
+ Pei-pei    | Cheng                    | 1946-12-04
+ Steven     | Spielberg                | 1946-12-18
+ Takeshi    | Kitano                   | 1947-01-18
+ Jean       | Reno                     | 1948-07-30
+ Samuel     | Jackson                  | 1948-12-21
+ Shelley    | Duvall                   | 1949-07-07
+            | Denden                   | 1950-01-23
+ Yimou      | Zhang                    | 1950-04-02
+ Bill       | Murray                   | 1950-09-21
+ Peter      | Carlberg                 | 1950-12-08
+ Mark       | Hamill                   | 1951-09-25
+ Mari       | Natsuki                  | 1952-05-02
+ Robert     | Zemeckis                 | 1952-05-14
+ Jeff       | Goldblum                 | 1952-10-22
+ Alfred     | Molina                   | 1953-05-24
+ Tim        | Allen                    | 1953-06-13
+ Ulrich     | Muhe                     | 1953-06-20
+ John       | Travolta                 | 1954-02-18
+ James      | Cameron                  | 1954-08-16
+ Lorraine   | Bracco                   | 1954-10-02
+ Ang        | Lee                      | 1954-10-23
+ Ray        | Liotta                   | 1954-12-18
+ George     | Tokoro                   | 1955-01-26
+ Bruce      | Willis                   | 1955-03-19
+ Yun-fat    | Chow                     | 1955-05-18
+ Willem     | Dafoe                    | 1955-07-22
+ Fernando   | Meirelles                | 1955-11-09
+ Tom        | Hanks                    | 1956-07-09
+ Carrie     | Fisher                   | 1956-10-21
+ John       | Lasseter                 | 1957-01-12
+ Mykelti    | Williamson               | 1957-03-04
+ Daniel     | Day-Lewis                | 1957-04-29
+ Francis    | McDormand                | 1957-06-23
+ Gary       | Oldman                   | 1958-03-21
+ Kar Wai    | Wong                     | 1958-07-17
+ Daryl      | Hannah                   | 1958-12-03
+ Luc        | Besson                   | 1959-03-18
+ Mark       | Romanek                  | 1959-09-18
+ Sam        | Raimi                    | 1959-10-23
+ Sean       | Young                    | 1959-11-20
+ Val        | Kilmer                   | 1959-12-31
+ Hugo       | Weaving                  | 1960-04-04
+ Ika        | Nord                     | 1960-04-29
+ Tilda      | Swinton                  | 1960-11-05
+ Cathy      | Moriarty                 | 1960-11-29
+ Jackey     | Haley                    | 1961-07-14
+ Woody      | Harrelson                | 1961-07-23
+ Dandan     | Song                     | 1961-08-25
+ Martina    | Gedeck                   | 1961-09-14
+ Andy       | Lau                      | 1961-09-27
+ Sion       | Sono                     | 1961-12-18
+ Min-sik    | Choi                     | 1962-05-30
+ Sebastian  | Koch                     | 1962-05-31
+ Tony       | Leung                    | 1962-06-27
+ Tom        | Cruise                   | 1962-07-03
+ Michelle   | Yeoh                     | 1962-08-06
+ Jodie      | Foster                   | 1962-11-19
+ Ralph      | Fiennes                  | 1962-12-22
+ Quentin    | Tarantino                | 1963-03-27
+ Chan-wook  | Park                     | 1963-08-23
+ Russell    | Crowe                    | 1964-04-07
+ Maggie     | Cheung                   | 1964-09-20
+ Guillermo  | del Toro                 | 1964-10-09
+ Mitsuru    | Fukikoshi                | 1965-02-17
+ Tomas      | Alfredson                | 1965-04-01
+ Connie     | Nielsen                  | 1965-07-03
+ Billy      | Zane                     | 1966-02-24
+ Zack       | Snyder                   | 1966-03-01
+ Paulo      | Morelli                  | 1966-03-10
+ Robin      | Wright                   | 1966-04-08
+ Irfan      | Khan                     | 1967-01-07
+ Nicole     | Kidman                   | 1967-06-20
+ James      | McTeigue                 | 1967-12-29
+ Olivia     | Williams                 | 1968-07-26
+ Sam        | Rockwell                 | 1968-11-05
+ Owen       | Wilson                   | 1968-11-18
+ Wes        | Anderson                 | 1969-05-01
+ Peter      | Dinklage                 | 1969-06-11
+ Faye       | Wong                     | 1969-08-08
+ Edward     | Norton                   | 1969-08-18
+ Noah       | Taylor                   | 1969-09-04
+ Martin     | McDonagh                 | 1970-03-26
+ Uma        | Thurman                  | 1970-04-29
+ Paul       | Anderson                 | 1970-06-26
+ Carla      | Gugino                   | 1971-08-29
+ Chris      | Tucker                   | 1971-08-31
+ Luke       | Wilson                   | 1971-09-21
+ Asuka      | Kurosawa                 | 1971-12-22
+ Danny      | Lloyd                    | 1972-10-13
+ Jude       | Law                      | 1972-12-29
+ Adrien     | Brody                    | 1973-04-14
+ Florian    | Henckel von Donnersmarck | 1973-05-02
+ Patrick    | Wilson                   | 1973-07-03
+ Paddy      | Considine                | 1973-09-05
+ Takeshi    | Kaneshiro                | 1973-10-11
+ Joaquin    | Phoenix                  | 1974-10-28
+ Leonardo   | DiCaprio                 | 1974-11-11
+ Tobey      | Maguire                  | 1975-06-27
+ Kate       | Winslet                  | 1975-10-05
+ Milla      | Jovovich                 | 1975-12-17
+ Ji-tae     | Yoo                      | 1976-04-13
+ Sally      | Hawkins                  | 1976-04-27
+ Chen       | Chang                    | 1976-10-14
+ Richard    | Ayoade                   | 1977-06-12
+ James      | Franco                   | 1978-04-19
+ Malin      | Akerman                  | 1978-05-12
+ Leandro    | Firmino                  | 1978-06-23
+ Ziyi       | Zhang                    | 1979-02-09
+ Jason      | Schwartzmann             | 1980-06-26
+ Natilie    | Portman                  | 1981-06-09
+ Megumi     | Kagurazaka               | 1981-09-28
+ Hei-Jung   | Kang                     | 1982-01-04
+ Kirsten    | Dunst                    | 1982-04-30
+ Tatsuya    | Fujiwara                 | 1982-05-15
+ Abbie      | Cornish                  | 1982-08-07
+ Gemma      | Chan                     | 1982-11-29
+ Rafe       | Spall                    | 1983-03-10
+ Alice      | Braga                    | 1983-04-15
+ Alexandre  | Rodrigues                | 1983-05-21
+ Jin-seo    | Yoon                     | 1983-08-05
+ Andrew     | Garfield                 | 1983-08-20
+ Paul       | Dano                     | 1984-06-19
+ Keira      | Knightley                | 1985-03-26
+ Carey      | Mulligan                 | 1985-05-28
+ Aki        | Maeda                    | 1985-07-11
+ Mason      | Gamble                   | 1986-01-16
+ Rumi       | Hiiragi                  | 1987-08-01
+ Miyu       | Irino                    | 1988-02-19
+ Darlan     | Cunha                    | 1988-07-26
+ Douglas    | Silva                    | 1988-09-27
+ Craig      | Roberts                  | 1991-01-21
+ Yasmin     | Paige                    | 1991-06-24
+ Suraj      | Sharma                   | 1993-03-21
+ Saoirse    | Ronan                    | 1994-04-12
+ Ivana      | Baquero                  | 1994-06-11
+ Kare       | Hedebrant                | 1995-06-28
+ Lina       | Leandersson              | 1995-09-27
+ Dillon     | Freasier                 | 1996-03-06
+ Tony       | Revolori                 | 1996-04-28
+ Hiroki     | Doi                      | 1999-08-10
+ Xian       | Gao                      |
+(182 rows)
 
 Que-21: Select the first and last names of all directors and actors born in the 1960s. Order the result by last name.
 Ans:
